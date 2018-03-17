@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- 引入jQuery -->
+    <script src="../jquery.min.js"></script>
+
+    <script src="../webuploader.min.js"></script>
+    <!-- 插件核心 -->
+    <script src="../Eleditor.min.js"></script>
+
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+		    -webkit-touch-callout: none;
+		    background-color: #fff;
+		    line-height: inherit;
+		    padding-top: 30px;
+		}
+		#contentEditor{
+			width: 100%;
+			min-height: 300px;
+			box-sizing: border-box;
+			padding: 10px;
+    		color: #444;
+		}
+		#contentEditor p{
+		    letter-spacing: 0.25px;
+		    font: 16px/25px Tahoma, Verdana, 宋体;
+		    margin: 20px 0px;
+		}
+		#contentEditor h4 {
+		    font-weight: bold;
+		    line-height: 1.333em;
+		    margin: 10px 0 20px;
+		    padding: 25px 0 0;
+		}
+		#contentEditor img{
+			width: 100%;
+			height: auto;
+			box-sizing: border-box;
+		}
+		.dempTip{
+		    border-left: 2px solid #00BCD4;
+		    padding-left: 5px;
+		    margin: 10px;
+		    font-size: 16px;
+		}
+		code{
+			white-space: pre-wrap;
+		    background: #2D2D2D;
+		    display: block;
+		    margin: 10px;
+		    border-radius: 5px;
+		    color: #fff;
+		}
+		.viewTit{
+		    color: #FF5722;
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    height: 30px;
+		    line-height: 30px;
+		    font-size: 14px;
+		    text-align: center;
+		    display: block;
+		    width: 100%;
+		    background: #FFEB3B;
+		    box-shadow: 0 0 5px;
+		}
+	</style>
+</head>
+<body>
+
+<font class="viewTit">（此编辑器仅适用移动端，chrome请按F12模拟手机设备进行浏览）</font>
+<script>
+	var ua = navigator.userAgent.toLowerCase();	;
+
+	if( ua.indexOf('android') >= 0 || ua.indexOf('iphone') >= 0 || ua.indexOf('ipad') >= 0 || $(window).width() <= 500 ){
+		$('.viewTit').hide();
+		$('body').css('padding-top', 0);
+	}
+</script>
+<p class="dempTip">使用方法：</p>
+
+<code>
+    &lt;!-- 引入jQuery --&gt;
+    &lt;script src="Eleditor目录/jquery.min.js"&gt;
+    &lt;/script&gt;
+
+    &lt;!-- 插件核心 --&gt;
+    &lt;script src="Eleditor目录/eleditor.min.js"&gt;
+    &lt;/script&gt;
+
+    &lt;!-- 如果需要图片上传 --&gt;
+    &lt;script src="Eleditor目录/webuploader.min.js"&gt;
+    &lt;/script&gt;
+
+    &lt;script&gt;
+    var Edr = new Eleditor({
+                el: '#contentEditor',
+                upload:{
+                   server: '/upload.json',
+                },
+        });
+    &lt;/script&gt;
+
+</code>
+
+<hr>
+
+<div id="contentEditor">
+
+   <h1 style="text-align: center;">点击开始编辑文章</h1>
+
+   <p>随着网站的不断发展，网站本身的架构会不断变化，页面和内容会在重设计过程中不断调整，被重新定向。网站本身的优化，往往不可避免地让一部分内容不再那么容易被用户找到，当用户打开的时候，就是<span class="wp_keywordlink_affiliate"><a href="http://www.uisdc.com/tag/404%e9%a1%b5%e9%9d%a2" title="View all posts in 404页面" target="_blank">404页面</a></span>了。</p> 
+   <p>绝大多数用户害怕看到这个页面，这意味着这个链接所对应的页面已经不复存在，或者搜索结果出错了。但是，如果你能够正确设计<span class="wp_keywordlink_affiliate"><a href="http://www.uisdc.com/tag/404%e9%a1%b5%e9%9d%a2" title="View all posts in 404页面" target="_blank">404页面</a></span>，反而能够充分利用它解决用户的问题，给你的网站带来更多的访客和流量。下面是精心总结的5个技巧，并不复杂，用好了当有奇效。</p> 
+   <h4>1、创建一个网站最佳内容清单</h4> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/airbnb-1.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232092" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/airbnb-1.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/airbnb-1-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/airbnb-1-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>用户虽然没有按照预期找到他们想要的页面和内容，但这并不意味着整个流程就走入了死胡同，如果你着力与创建优质的内容，那么应该在<span class="wp_keywordlink_affiliate"><a href="http://www.uisdc.com/tag/404%e9%a1%b5%e9%9d%a2" title="View all posts in 404页面" target="_blank">404页面</a></span>为用户推荐最佳的网站内容。</p> 
+   <p>相比于单独留下一个硕大无比的404，更好的选择是为用户提供点建议，帮助他们更好的探索你的网站的其他内容。用户可能会在其他的地方找到他们想要的</p> 
+   <h4>2、拿好处来同用户交换电子邮件</h4> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/incentive.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232091" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/incentive.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/incentive-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/incentive-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>尽管访客面对这404页面，依然没有找到他们想要的内容，但这并不意味着无法将他们转化为未来的用户。获取用户的邮件，定期推送信息是将访客最终转化为网站用户的重要手段，而想要让订阅网站的信息推送，还得拿出一些好处出来：免费的课程，电子图书，免费可用的素材，实用的工具等等等等。</p> 
+   <p>对于许多功能性的网站而言，增加网站的流量，或者说增加客户是主要的目标。如果网站的拥有者是牙医、律师或者说某个整形机构，那么每增加一名客户，都意味着数千美元的进账。所以，抓住每一个访客并且将他们转化为客户，是非常有意义的。</p> 
+   <h4>3、加个搜索框</h4> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/twitter-search.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232090" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/twitter-search.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/twitter-search-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/twitter-search-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>许多较老、经过重设计的网站，许多老页面都会在调整中被重新定位到另一个位置。所以，在你的404页面中添加一个能全局搜索的搜索框是非常合乎情理，也能够帮助访客解决问题的方案。即使原始链接已经不存在了，也可以根据内容、主题来搜索到相关的内容， 甚至是被重新定位的页面。搜索框不仅能够提供给用户获取内容的新途径，而且能够进一步提升网站流量。</p> 
+   <p>Twitter 在这件事情上就做的很棒，通过指导用户搜索目标主题来告别404的尴尬。</p> 
+   <h4>4、添加联系方式</h4> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/magnt.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232089" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/magnt.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/magnt-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/magnt-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>许多优秀的404页面会包含设计师或者相关运营、维护团队的联系方式。这些表单、联系方式主要可以起到两个作用。其一，帮助网站的访客，或者说潜在客户可以直接联系到网站的拥有者、设计者或者运营者。即使他们没有找到想要的内容，通过页面的联系方式可以直接联系相关人员，继续获取想要的信息。</p> 
+   <p>它的另外一项重要的功能在于，表单和联系方式能够让访客提交错误信息，从而让设计和内容团队有针对性地调整、修改、提升网站的内容。</p> 
+   <h4>5、控制好你的幽默感</h4> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/homestarrunner.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232088" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/homestarrunner.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/homestarrunner-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/homestarrunner-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>虽然有不少相关的404页面设计的文章推荐使用幽默的手法来环节尴尬的氛围，但是我对此一直持保留意见。一方面，大家的幽默感并不一定能够“一致”，同样的笑话对不同的访客可能效果差别很大。另一方面，当用户在搜索一项重要的信息的时候，跳出来的是一个404，这本身就是一个笑话。</p> 
+   <p>绝大多数用户在网站中碰到一个不可用的页面，并不会觉得这很好笑。实际状况中，用户仅仅只是要找到他们想要的东西，继续探索，或者转头离开。想让用户会心一笑想法并不为过，但是提供更加切实可行的解决方案，来的更加实在。</p> 
+   <h4>结语</h4> 
+   <p>实际上，今天所推荐的5个技巧，都是建立在一个目的之上：让用户不会在你的网站中陷入死胡同。当用户陷入困境的时候，你能够在页面中提供额外的选项，就是为他们打开了一扇拥有可能性的门。最重要的是，不要把所有的东西都堆砌在404页面上，有策略地提供解决方案，才是正确的思路。</p> 
+   <img src="http://image.uisdc.com/wp-content/uploads/2017/05/hilary.jpg" alt="" width="1856" height="1280" class="alignnone size-full wp-image-232087" srcset="http://image.uisdc.com/wp-content/uploads/2017/05/hilary.jpg 1856w, http://image.uisdc.com/wp-content/uploads/2017/05/hilary-768x530.jpg 768w, http://image.uisdc.com/wp-content/uploads/2017/05/hilary-800x552.jpg 800w" sizes="(max-width: 1856px) 100vw, 1856px" /> 
+   <p>如果你是网站的设计者或者管理者，你应该同遭遇404页面的访客多沟通，一方面能够真正帮他们找到想要的东西，提供可用的服务，让你的网站和服务能够走的更远。而另外一方面，即时跟进出错的状况，能够帮你调整网站，提供正确的服务和信息。</p> 
+   <p>404页面不是世界的尽头，它们更应该是一个十字路口，提供不同的路径，将用户引领到的对的地方。</p> 
+
+</div>
+
+<script>
+var contentEditor = new Eleditor({
+						el: '#contentEditor',
+						upload:{
+							server: '/upload.json',
+							compress: false,
+							fileSizeLimit: 2
+						},
+						/*自定义按钮的例子*/
+						toolbars: [
+			              'insertText',
+			              'editText',
+			              'insertImage',
+			              'insertLink',
+			              'insertHr',
+			              'delete',
+
+			              //自定义一个按钮
+			              {
+			                  id: 'changeIndent',
+			                  // tag: 'p,img', //指定P标签操作，可不填
+			                  name: '扩展按钮',
+			                  handle: function(select, controll){//回调返回选择的dom对象和控制按钮对象
+
+				                  	alert('toolbars参数可新增和调整编辑器按钮');
+				                    var _$ele = $(select);
+
+						            /*注意！！！在编辑修改内容前务必通过saveState保存下状态，这样编辑器撤销按钮才会生效，否则无法撤销修改*/
+						            contentEditor.saveState();
+
+			                    	_$ele.css('text-indent', '5em');
+			                  }
+			              },
+			              'undo',
+			              'cancel'
+						]
+						//placeHolder: 'placeHolder设置占位符'
+					});
+</script>
+
+</body>
+</html>

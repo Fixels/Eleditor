@@ -1,0 +1,12 @@
+#这是上传后端返回的JSON结构
+#1.成功时status = 1，附带url字段
+{
+	"status": 1,
+	"url": "http://image.uisdc.com/wp-content/uploads/2017/05/homestarrunner.jpg"
+}
+
+#2.失败时status = 0，附带msg字段
+{
+	"status": 0,
+	"msg": "服务器空间不足"
+}
