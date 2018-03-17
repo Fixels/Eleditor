@@ -5,7 +5,7 @@
 >QQ群: 567594992
 >Eleditor其实是为了解决的内部一些特殊编辑需求而开发的一个编辑器，开源出来提供一个简单的富文本编辑方案，首先因为操作问题它并不适合所有业务场景
 
->文档地址[http://doc.eleditor.fixel.cn/](https://doc.eleditor.fixel.cn/)
+>文档地址[http://doc.eleditor.fixel.cn/](http://doc.eleditor.fixel.cn/)
 
 目前编辑器还在持续维护，因本人精力有限，群里记录的问题可能本人不能及时回复，但每个问题和意见都会一一记录
 
