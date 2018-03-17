@@ -7,7 +7,7 @@
 
 >文档地址[http://doc.eleditor.fixel.cn/](http://doc.eleditor.fixel.cn/)
 
-更新日志V1.7（2018-03-15）<br>
+更新日志V1.8（2018-03-15）<br>
 1.增加clear接口，以正确清空编辑器内容<br>
 2.增加revoke撤销接口<br>
 3.增加trigger接口，用于直接触发添加逻辑，目前仅支持（insertText, insertLink）<br>
