@@ -1,12 +1,12 @@
 /**
-* Version: 1.8
+* Version: 1.8.1
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Author: Try
 */
 (function(w){
 	var _debug = false;
-	var _version = '1.7';
+	var _version = '1.8.1';
 	var _namespace = 'Eleditor';
 	var _notctname = ['INPUT', 'IMG', 'TEXTAREA'];
 	var _toolnames = { 
@@ -217,7 +217,8 @@
 			// _undolen = isNaN(_args._undolen) ? 10 : _args._undolen;
 			_editorUid = _genEditorUid(),
 			_historys = [],
-			_placeHolder = _args.placeHolder || '<p class="Eleditor-placeholder">点击此处编辑内容</p>';
+			_placeHolder = _args.placeHolder || '<p class="Eleditor-placeholder">点击此处编辑内容</p>',
+			_uploadRole = null;
 
 		if( _args.toolbars.length === 0 ){
 			_args.toolbars = [
@@ -445,12 +446,12 @@
 						    fileVal: _args.upload.formName,
 						});
 			_imageUploader.on( 'uploadStart', function( _file, _percentage ) {
-				_hideEditorControllerLayer();
 			    _showLoadingMask('上传图片中<span id="uploadProgress">1</span>%');
 			});		
 			_imageUploader.on( 'uploadProgress', function( _file, _percentage ) {
 			    $('#uploadProgress').html( parseFloat((_percentage * 100).toFixed(2)) );
 			});
+			// _uploadRole
 			_imageUploader.on( 'error', function() {
 			    if( arguments[0]=="Q_TYPE_DENIED" ) w.alert("请上传图片格式文件");
 		        if( arguments[0]=="F_EXCEED_SIZE" ) w.alert("文件大小不能超过"+(arguments[1] / 1048576)+"M");
@@ -458,7 +459,7 @@
 			_imageUploader.on( 'uploadComplete', function() { _hideLoadingMask(); });			
 			_imageUploader.on( 'uploadSuccess', function( _file, _call ) {
 
-				var _hasStyleBarBtn = _file.source._refer[0].className.indexOf('Eleditor-textStyle-item-upImg') >= 0;
+				var _hasStyleBarBtn = $('#rt_'+_file.source.ruid).parents('.Eleditor-textStyle-item-upImg').length > 0;
 
 			    if( _call.status == 1 ){
 
@@ -476,6 +477,7 @@
 			    }else{
 			    	w.alert('上传失败：['+_call.msg+']');
 			    }
+			    _hideEditorControllerLayer();
 			});
 
 			_imageUploader.addButton({ id: _$editorBarUploadImageBtn });	
