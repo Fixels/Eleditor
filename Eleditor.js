@@ -1,12 +1,11 @@
 /**
-* Version: 1.8.1
+* Version: 1.8.2
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Author: Try
 */
 (function(w){
 	var _debug = false;
-	var _version = '1.8.1';
 	var _namespace = 'Eleditor';
 	var _notctname = ['INPUT', 'IMG', 'TEXTAREA'];
 	var _toolnames = { 
@@ -477,7 +476,9 @@
 			    }else{
 			    	w.alert('上传失败：['+_call.msg+']');
 			    }
-			    _hideEditorControllerLayer();
+			    if( !_hasStyleBarBtn ){
+			    	_hideEditorControllerLayer();
+			    }
 			});
 
 			_imageUploader.addButton({ id: _$editorBarUploadImageBtn });	
