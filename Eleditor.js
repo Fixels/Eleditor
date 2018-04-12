@@ -844,7 +844,6 @@
 					_$selected = _$wrap.find('>:last');
 					_editorModuleEvents.insertLink();
 				}
-				_hideEditorControllerLayer();
 			},
 			saveState: function(){
 				return _appendHistory();
