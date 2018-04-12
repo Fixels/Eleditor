@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.2
+* Version: 1.8.3
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Author: Try
