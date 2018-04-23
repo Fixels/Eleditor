@@ -1,5 +1,4 @@
 >本编辑器仅可用于手机端，如有Bug反馈和建议请发送邮件至：try@fixel.cn
->官网地址: [https://eleditor.fixel.cn/](https://eleditor.fixel.cn/)
 > ![image](https://eleditor.fixel.cn/static/eleditor/images/qrcode.png)
 
 >QQ群: 567594992
