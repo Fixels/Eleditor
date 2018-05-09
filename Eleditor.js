@@ -47,11 +47,11 @@
 	    return false;
 	};
 	var _formatInnerText = function (t) {
-        var s = t.replace(/\ +/g, "");
-        s = t.replace(/[ ]/g, "");
-        s = t.replace(/[\r\n]/g, "");
-        return s.replace(/(^\s*)|(\s*$)/g, "");
-    };
+		var s = t.replace(/\ +/g, "");
+		s = s.replace(/[ ]/g, "");
+		s = s.replace(/[\r\n]/g, "");
+		return s.replace(/(^\s*)|(\s*$)/g, "");
+	};
 	var _getLayerMaxZIndex = function(){
 	    var _max = Math.max.apply(null, 
 	    　　$.map($('body *'), function(e) {
