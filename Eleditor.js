@@ -855,7 +855,7 @@
 				var _$cloneNode = _$wrap.clone();
 					_$cloneNode.find('.Eleditor-placeholder').remove();
 
-				return _formatInnerText(_$cloneNode.html());
+				return _$cloneNode.html();
 			},
 			getContentText: function(){
 				var _$cloneNode = _$wrap.clone();
