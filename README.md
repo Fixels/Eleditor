@@ -4,7 +4,7 @@
 >QQ群: 567594992
 >Eleditor其实是为了解决的内部一些特殊编辑需求而开发的一个编辑器，开源出来提供一个简单的富文本编辑方案，首先因为操作问题它并不适合所有业务场景
 
->文档地址[http://doc.eleditor.fixel.cn/](http://doc.eleditor.fixel.cn/)
+>文档地址[https://www.kancloud.cn/hihwp/eleditor/](https://www.kancloud.cn/hihwp/eleditor/)
 
 更新日志V1.8.3（2018-04-12）<br>
 1.修复trigger方法无法保存bug
