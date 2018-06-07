@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.3
+* Version: 1.8.4
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Author: Try
@@ -212,6 +212,7 @@
 
 		var _args = arguments[0];
 			_args.upload = _args.upload || {};
+			_args.mounted = _args.mounted || function(){};
 			_args.toolbars = _args.toolbars || [],
 			// _undolen = isNaN(_args._undolen) ? 10 : _args._undolen;
 			_editorUid = _genEditorUid(),
@@ -434,8 +435,12 @@
 
 			//controller
 			_imageUploader = WebUploader.create({
-							auto: true, server: _args.upload.server || '/upload',
-						    pick: _$editorUploadImageBtn, duplicate: true, resize: false,
+							auto: true, 
+							server: _args.upload.server || '/upload',
+						    pick: _$editorUploadImageBtn, 
+						    duplicate: true, 
+						    resize: false,
+						    headers: _args.upload.headers || {},
 						    fileSingleSizeLimit: _args.upload.fileSizeLimit ? _args.upload.fileSizeLimit*1024*1024 : undefined,
 						    accept: Object.assign({
 						    				title: 'Images', 
@@ -799,6 +804,8 @@
             return _e.preventDefault() == 0;
         });
 
+        /*call*/
+        _args.mounted();
 
 		return {
 			clear: function(){
@@ -863,6 +870,7 @@
 
 				return _formatInnerText(_$cloneNode.text());
 			},
+			hideEditorControllerLayer: _hideEditorControllerLayer,
 			destory: function(){
 				_$wrap.removeAttr('Eleditor-Inited Eleditor-Uid');
 				_$wrap.removeClass('Eleditor-area');

@@ -6,8 +6,10 @@
 
 >文档地址[https://www.kancloud.cn/hihwp/eleditor/](https://www.kancloud.cn/hihwp/eleditor/)
 
-更新日志V1.8.3（2018-04-12）<br>
-1.修复trigger方法无法保存bug
+更新日志V1.8.4（2018-06-07）<br>
+1.upload新增header以便增加自定义请求参数
+2.新增mounted挂载钩子
+3.源码demo增加[视频上传]扩展案例
 
 目前编辑器还在持续维护，因本人精力有限，群里记录的问题可能本人不能及时回复，但每个问题和意见都会一一记录
 
