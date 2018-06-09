@@ -1,7 +1,8 @@
 /**
-* Version: 1.8.4
+* Version: 1.8.5
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
+* Doc: http://doc.eleditor.fixel.cn
 * Author: Try
 */
 (function(w){
@@ -213,6 +214,7 @@
 		var _args = arguments[0];
 			_args.upload = _args.upload || {};
 			_args.mounted = _args.mounted || function(){};
+			_args.changer = _args.changer || function(){};
 			_args.toolbars = _args.toolbars || [],
 			// _undolen = isNaN(_args._undolen) ? 10 : _args._undolen;
 			_editorUid = _genEditorUid(),
@@ -389,6 +391,7 @@
 				}
 
 				_$wrap.html(_historys.pop());
+				_args.changer();
 
 				_flushHistoryBtn();
 				_flushEditorDeleteLayerHistoryBtn();
@@ -478,6 +481,7 @@
 							_$selected.remove();
 						}
 					}
+					_args.changer();
 			    }else{
 			    	w.alert('上传失败：['+_call.msg+']');
 			    }
@@ -509,7 +513,7 @@
 								_$selected.remove();
 							}
 						}
-
+						_args.changer();
 					}, function(_err){
 						w.alert('上传失败：['+_err+']');
 					});
@@ -547,7 +551,7 @@
 
 				var _$hr = $('<div class="horizontal-line" style="padding: 10px 0;border-bottom: 1px solid #aaa;margin-bottom: 20px;"></div>');
 					_$selected.after(_$hr);
-
+					_args.changer();
 				_hideEditorControllerLayer();
 			},
 			editText: function(){
@@ -561,6 +565,7 @@
 
 				if( _$wrap.find('*').length == 1 ){
 					_appendHistory();
+					_args.changer();
 					_$selected.remove();
 				}else{
 					_showEditorDeleteLayer();
@@ -614,6 +619,7 @@
 			if( _formatInnerText(_$cloneNode.text()) != '' ){
 				_appendHistory();
 				_$wrap.html('');
+				_args.changer();
 				_correctHtmlStructure(_$wrap, _placeHolder);
 			}
 		});
@@ -738,7 +744,7 @@
 						_$selected.remove();
 					}
 				}
-
+				_args.changer();
 				_flushEditorControllerLayerPosi();
 			}
 
@@ -793,6 +799,7 @@
 						_$this.remove();
 						_correctHtmlStructure(_$wrap, _placeHolder);
 					}
+					_args.changer();
 				}
 
 			}else if( !_$this.hasClass('Eleditor-active') ){
@@ -809,6 +816,7 @@
 
 		return {
 			clear: function(){
+				_args.changer();
 				_$wrap.html('');
 				_correctHtmlStructure(_$wrap, _placeHolder);
 			},

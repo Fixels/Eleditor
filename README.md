@@ -6,10 +6,8 @@
 
 >文档地址[https://www.kancloud.cn/hihwp/eleditor/](https://www.kancloud.cn/hihwp/eleditor/)
 
-更新日志V1.8.4（2018-06-07）<br>
-1.upload新增header以便增加自定义请求参数<br>
-2.新增mounted挂载钩子<br>
-3.源码demo增加[视频上传]扩展案例<br>
+更新日志V1.8.5（2018-06-09）<br>
+1.新增changer钩子<br>
 
 目前编辑器还在持续维护，因本人精力有限，群里记录的问题可能本人不能及时回复，但每个问题和意见都会一一记录
 
