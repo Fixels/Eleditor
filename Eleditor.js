@@ -512,6 +512,7 @@
 							if( _$selected.hasClass('Eleditor-placeholder') ){
 								_$selected.remove();
 							}
+							_hideEditorControllerLayer();
 						}
 						_args.changer();
 					}, function(_err){
