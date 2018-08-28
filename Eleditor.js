@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.5
+* Version: 1.8.6
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Doc: http://doc.eleditor.fixel.cn
@@ -838,10 +838,6 @@
 
 				if( typeof _object == 'string' && _$content.length == 0 ){
 					_$content = $('<p>'+_object+'</p>');
-				}
-
-				if( _formatInnerText(_$content.text()) == '' ){
-					return;
 				}
 
 				_$wrap.find('.Eleditor-placeholder').remove();
