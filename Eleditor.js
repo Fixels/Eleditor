@@ -441,7 +441,6 @@
 							auto: true, 
 							server: _args.upload.server || '/upload',
 						    pick: _$editorUploadImageBtn, 
-						    duplicate: true, 
 						    resize: false,
 						    headers: _args.upload.headers || {},
 						    fileSingleSizeLimit: _args.upload.fileSizeLimit ? _args.upload.fileSizeLimit*1024*1024 : undefined,
