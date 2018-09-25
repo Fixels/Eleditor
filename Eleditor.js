@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.6
+* Version: 1.8.7
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Doc: http://doc.eleditor.fixel.cn
@@ -443,6 +443,7 @@
 						    pick: _$editorUploadImageBtn, 
 						    resize: false,
 						    headers: _args.upload.headers || {},
+						    duplicate: true,
 						    fileSingleSizeLimit: _args.upload.fileSizeLimit ? _args.upload.fileSizeLimit*1024*1024 : undefined,
 						    accept: Object.assign({
 						    				title: 'Images', 
