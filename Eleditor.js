@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.7
+* Version: 1.8.8
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Doc: http://doc.eleditor.fixel.cn
@@ -866,7 +866,7 @@
 			getContent: function(){
 				var _$cloneNode = _$wrap.clone();
 					_$cloneNode.find('.Eleditor-placeholder').remove();
-
+					_$cloneNode.find('.Eleditor-active').removeClass('Eleditor-active');
 				return _$cloneNode.html();
 			},
 			getContentText: function(){
