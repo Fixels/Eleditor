@@ -95,8 +95,9 @@
 	};
 
 	var _buildEditorModule = function(_toolbars, _uid){
-
-		var _html = '<div class="Eleditor-wrap" style="z-index:'+_getLayerMaxZIndex()+'" id="'+_uid+'">\
+		
+		var _layerZIndex = _getLayerMaxZIndex();
+		var _html = '<div class="Eleditor-wrap" style="z-index:'+_layerZIndex+'" id="'+_uid+'">\
 						<div class="Eleditor-controller">\
 						<ul>';
 
@@ -197,7 +198,7 @@
 							<button class="Eleditor-cancel">取消</button>\
 						</div>\
 					</div>\
-					<div class="Eleditor-delete-layer">\
+					<div class="Eleditor-delete-layer" style="z-index:'+_layerZIndex+'">\
 						<div class="Eleditor-delete-tip">进入批量删除模式，点击段落进行删除</div>\
 						<div class="Eleditor-delete-revoke"></div>\
 						<div class="Eleditor-delete-clear"></div>\
