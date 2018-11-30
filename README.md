@@ -4,7 +4,7 @@
 >QQ群: 567594992
 >Eleditor其实是为了解决的内部一些特殊编辑需求而开发的一个编辑器，开源出来提供一个简单的富文本编辑方案，首先因为操作问题它并不适合所有业务场景
 
->文档地址[https://www.kancloud.cn/hihwp/eleditor/](https://www.kancloud.cn/hihwp/eleditor/)
+>文档地址[https://www.kancloud.cn/hihwp/eleditor/content/default.md](https://www.kancloud.cn/hihwp/eleditor/content/default.md)
 
 更新日志V1.8.5（2018-06-09）<br>
 1.新增changer钩子<br>
