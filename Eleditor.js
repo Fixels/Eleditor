@@ -444,6 +444,7 @@
 						    pick: _$editorUploadImageBtn, 
 						    resize: false,
 						    headers: _args.upload.headers || {},
+						    formData: _args.upload.formData || {},
 						    duplicate: true,
 						    fileSingleSizeLimit: _args.upload.fileSizeLimit ? _args.upload.fileSizeLimit*1024*1024 : undefined,
 						    accept: Object.assign({

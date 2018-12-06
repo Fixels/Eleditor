@@ -155,9 +155,9 @@ var contentEditor = new Eleditor({
 						el: '#contentEditor',
 						upload:{
 							server: '/',
-							// headers: {
-							// 	'token': '123123'
-							// },
+							formData: {
+								'token': '123123'
+							},
 							compress: false,
 							fileSizeLimit: 2
 						},
