@@ -1,5 +1,5 @@
 /**
-* Version: 1.8.8
+* Version: 1.8.9
 * Title: Eleditor 移动端富文本编辑器
 * Site: https://eleditor.fixel.cn
 * Doc: http://doc.eleditor.fixel.cn
@@ -40,6 +40,7 @@
 	}
 
 	var _debug = false;
+	var _version = '1.8.9'
 	var _namespace = 'Eleditor';
 	var _notctname = ['INPUT', 'IMG', 'TEXTAREA'];
 	var _toolnames = { 
@@ -68,7 +69,7 @@
 		func(_js);
 		return _js;
 	}(function(s){
-		var _buildLib = '<link rel="stylesheet" href="'+s+'layout/base.css'+(_debug ? '?v=' + (+new Date()) : '')+'">';
+		var _buildLib = '<link rel="stylesheet" href="'+s+'layout/base.css?v='+(_debug ? (+new Date()) : _version)+'">';
 		$('head').append(_buildLib);
 	});
 
