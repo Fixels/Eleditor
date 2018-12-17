@@ -6,9 +6,6 @@
 
 >文档地址[https://www.kancloud.cn/hihwp/eleditor/content/default.md](https://www.kancloud.cn/hihwp/eleditor/content/default.md)
 
-更新日志V1.8.5（2018-06-09）<br>
-1.新增changer钩子<br>
-
 目前编辑器还在持续维护，因本人精力有限，群里记录的问题可能本人不能及时回复，但每个问题和意见都会一一记录
 
 开源基于MIT协议，允许自由使用和修改代码
