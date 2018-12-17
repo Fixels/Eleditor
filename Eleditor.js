@@ -538,12 +538,19 @@
 				try{
 					_args.uploader.call(this).then(function(_url){
 
+						var _urls = typeof _url === 'object' && _url.length ? _url : [_url]
+
 						if( _hasStyleBarBtn ){
-							_$editorTextArea.append('<img src="'+_url+'">');
+
+							for (var _uindex = 0; _uindex < _urls.length; _uindex++) {
+								_$editorTextArea.append('<img src="'+_urls[_uindex]+'">');
+							}
 						}else{
 					    	_appendHistory();
 
-							_$selected.after( $('<img src="'+_url+'">') );
+							for (var _uindex = 0; _uindex < _urls.length; _uindex++) {
+								_$selected.after( $('<img src="'+_urls[_uindex]+'">') );
+							}
 
 							if( _$selected.hasClass('Eleditor-placeholder') ){
 								_$selected.remove();
